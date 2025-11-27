@@ -10,19 +10,19 @@ You will build:
 - A **backend API proxy** that fetches users from a public API
 - A **frontend interface** that displays, filters, and interacts with those users
 ---
-# Backend Requirements (Node.js + Express)
-1. Create a simple backend server that exposes a single proxy endpoint.
+## Backend Requirements (Node.js + Express)
+# 1. Create a simple backend server that exposes a single proxy endpoint.
 ### **Base URL**
 ```
 http://localhost:3000
 ```
 ### **Endpoint: `GET /api/users`**
 This endpoint must:
-a. Fetch users from `https://jsonplaceholder.typicode.com/users`
+a. Fetch users from `https://jsonplaceholder.typicode.com/users` 
 b. Include basic error handling
 c. Return the JSON data to your frontend
 
-2. Add a backend endpoint:
+# 2. Add a backend endpoint:
 ```
 GET /api/search?q=<term>
 ```

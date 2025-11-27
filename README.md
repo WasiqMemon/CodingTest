@@ -42,7 +42,7 @@ This endpoint must:
 This endpoint must:
 
 a.  Implement **Levenshtein distance** *from scratch* (no external
-    distance libraries). See #Annexure at the end\
+    distance libraries). See [Annexure](#annexure) at the end\
 b.  For each user, compute similarity between:
     -   search term\
     -   user.name\

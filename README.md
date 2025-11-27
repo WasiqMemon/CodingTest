@@ -26,10 +26,13 @@ You will build:
     http://localhost:3000
 
 **Endpoint: `GET /api/users`**
+
 This endpoint must:
 
 1.  Fetch users from `https://jsonplaceholder.typicode.com/users`
+   
 2.  Include basic error handling
+   
 3.  Return the JSON data to your frontend
 
 ------------------------------------------------------------------------

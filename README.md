@@ -144,7 +144,6 @@ When a user is clicked, show their details on the right side:
     -   Live Vercel link
 
 ------------------------------------------------------------------------
-------------------------------------------------------------------------
 
 ## Deployment Instructions
 

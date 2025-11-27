@@ -12,8 +12,8 @@ Please follow all requirements and submission instructions below.
 You will build:
 
 -   A **backend API proxy** that fetches users from a public API
--   A **frontend interface** that displays, filters, and interacts with
-    those users
+
+-   A **frontend interface** that displays, filters, and interacts with those users
 
 ------------------------------------------------------------------------
 
@@ -39,8 +39,9 @@ This endpoint must:
 
 ### 2. Add a backend endpoint
 
-    GET /api/search?q=<term>
-
+```
+GET /api/search?q=<term>
+```
 
 This endpoint must:
 
@@ -48,9 +49,9 @@ a.  Implement **Levenshtein distance** *from scratch* (no external distance libr
 
 b.  For each user, compute similarity between:
 
-    -   search term
+- search term
     
-    -   user.name
+- user.name
     
 c.  Sort results by similarity (descending) 
 
@@ -58,17 +59,17 @@ d.  Return the top 5 matches
 
 e.  Performance requirements:
 
-    -   Must compute a single query in **\< 50ms** on average
-    
-    -   Use optimized DP (**O(min(m, n)) space**)
-    
-f.  Include at least **3 unit tests**:
+- Must compute a single query in < 50ms on average
 
-    -   perfect match
+- Use optimized DP (O(min(m, n)) space)
     
-    -   1 edit distance
+f.  Include at least 3 unit tests:
+
+- perfect match
     
-    -   no similarity
+- 1 edit distance
+    
+- no similarity
 
 ------------------------------------------------------------------------
 

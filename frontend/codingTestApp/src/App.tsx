@@ -1,11 +1,25 @@
-import { useState } from "react";
+import React from "react";
 import "./App.css";
 import Users from "./pages/users";
 
 function App() {
-	// const [count, setCount] = useState(0);
-
-	return <Users />;
+	return (
+		<div
+			style={{
+				flex: 1,
+				backgroundColor: "white",
+				height: "100%",
+				width: "100%",
+			}}
+		>
+			<div>
+				<Users />
+			</div>
+			<p className="read-the-docs">
+				Click on the Vite and React logos to learn more
+			</p>
+		</div>
+	);
 }
 
 export default App;

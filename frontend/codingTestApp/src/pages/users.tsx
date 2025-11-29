@@ -1,5 +1,6 @@
 import { Box, Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import { fetchUsers } from "../services/userservice";
 
 const Users = () => {
 	const dummyData = [
@@ -19,6 +20,8 @@ const Users = () => {
 	];
 
 	const [searchText, setSearchText] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
+	const [data, setData] = useState<any[]>([]);
 	const [filteredList, setFilteredList] = useState<any[]>([]);
 
 	const onSearch = () => {
@@ -31,9 +34,23 @@ const Users = () => {
 		} else setFilteredList(dummyData);
 	};
 
+	const fetchData = async () => {
+		setIsLoading(true);
+		fetchUsers()
+			.then((res) => setData(res))
+			.catch((err) => console.log(err))
+			.finally(() => setIsLoading(false));
+	};
+
 	useEffect(() => {
+		//to check for matching users
 		onSearch();
 	}, [searchText]);
+
+	useEffect(() => {
+		//to  fetch users data from backend
+		fetchData();
+	}, []);
 
 	return (
 		<Grid
